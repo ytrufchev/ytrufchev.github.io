@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Line — One line a day journal</title>
+  <meta name="description" content="Daily Line is a private one-line-a-day journal for Android. Write one line, track your mood, and see what you wrote on this day in past years. Works offline.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <a href="../">Trufchev Apps</a>
+    <nav><a href="privacy.html">Privacy</a></nav>
+  </header>
+  <main>
+    <h1>One line a day.<br>Years of memories.</h1>
+    <p class="lead">Daily Line is a private 5-year journal for Android. Write a single line about your day, pick a mood, and next year, that line will be waiting for you.</p>
+    <a class="button" href="https://play.google.com/store/apps/details?id=com.trufchev.dailyline">Get it on Google Play</a>
+
+    <div class="pixels" id="pixels" aria-hidden="true"></div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="emoji">🗓️</div>
+        <h3>On this day</h3>
+        <p>See what you wrote on the same date one, two, five years ago.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🙂</div>
+        <h3>Mood tracking</h3>
+        <p>One tap to log how the day felt, with streaks and 30-day insights.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🔒</div>
+        <h3>Private by design</h3>
+        <p>No account. Your journal stays on your phone and works fully offline.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">⏰</div>
+        <h3>Gentle reminder</h3>
+        <p>An optional daily nudge at the time you choose.</p>
+      </div>
+    </div>
+
+    <h2>Daily Line Pro</h2>
+    <p>A one-time purchase, with no subscription, that removes ads and unlocks Year in Pixels and color themes.</p>
+  </main>
+  <footer>
+    © 2026 Trufchev Apps · <a href="privacy.html">Privacy policy</a> · <a href="mailto:trufchevyordan@gmail.com">trufchevyordan@gmail.com</a>
+  </footer>
+  <script>
+    // Decorative "Year in Pixels" strip.
+    const colors = ['#E5484D', '#F2994A', '#F2C94C', '#6FCF97', '#27AE60'];
+    const grid = document.getElementById('pixels');
+    for (let i = 0; i < 31 * 4; i++) {
+      const cell = document.createElement('span');
+      if (Math.random() < 0.75) {
+        const r = Math.random();
+        cell.style.background = colors[r < 0.05 ? 0 : r < 0.15 ? 1 : r < 0.4 ? 2 : r < 0.8 ? 3 : 4];
+      }
+      grid.appendChild(cell);
+    }
+  </script>
+</body>
+</html>
